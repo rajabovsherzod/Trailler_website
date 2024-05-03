@@ -1,0 +1,229 @@
+/* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #002c69;
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+    z-index: 10;
+  }
+  .main-header__brand img {
+    width: 250px;
+  }
+  .main-header__brand {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .search{
+    display: inline-block;;
+   margin-left: 170px;
+   height: 30px;
+  }
+  .btn-search{
+    width: 60px;
+    height: 25px;
+    padding: 0%;
+  }
+  .header-panel{
+    display: inline-block;
+  }
+  .header-panel-item{
+    color: #ffffff;
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 3.9rem;
+    cursor: pointer;
+  }
+  .header-panel-items{
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .loginn{
+    display: inline-block;
+    margin-left: 70px;
+  }
+  .btn-login{
+    height: 30px;
+  }
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./0053d23dd083b79187edff20614862f7.jpg);
+    background-size: cover;
+
+}
+
+.container1{
+    position: relative;
+    width: 650px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+   
+}
+
+.container1 .forms{
+    display: flex;
+    align-items: center;
+    height: 480px;
+    width: 150%;
+    transition: height 0.2s ease;
+    margin-left: 20px;
+}
+
+
+.container1 .form{
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container1 .active .login{
+    margin-left: -100%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container1 .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container1 .active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container1 .active .forms{
+    height: 600px;
+}
+.container1 .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+.loginn  a{
+    text-decoration: none;
+    color: #ffffff;
+}

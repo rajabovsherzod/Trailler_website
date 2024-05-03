@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailer.uz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body{
+            background-color: #002c69;
+           font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+          overflow-x: hidden;
+          z-index: 5;
+        }
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #002c69;
+            box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+            z-index: 10;
+          }
+          .main-header__brand img {
+            width: 250px;
+          }
+          .main-header__brand {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .search{
+            display: inline-block;;
+           margin-left: 170px;
+           height: 30px;
+          }
+          .btn-search{
+            width: 60px;
+            height: 25px;
+            padding: 0%;
+          }
+          .header-panel{
+            display: inline-block;
+          }
+          .header-panel-item{
+            color: #ffffff;
+            font-size: 1rem;
+            display: inline-block;
+            margin-left: 3.9rem;
+            cursor: pointer;
+          }
+          .header-panel-items{
+            display: inline-block;
+            margin-top: 10px;
+          }
+          .login{
+            display: inline-block;
+            margin-left: 70px;
+          }
+          .btn-login{
+            height: 30px;
+          }
+          .login a{
+            text-decoration: none;
+            color: #ffffff;
+          }
+          /*.add {
+            display: inline-block;
+            margin-right: 2.5rem;
+          }
+          .sun-mode {
+            display: inline-block;
+          }
+          .dark-mode {
+            display: inline-block;
+          }
+          .natifications{
+            display: inline-block;
+          } */
+          section {
+            margin-top: 75px;
+            height: 100%;
+            width: 14%;
+            float: left;
+            margin-right: 1px;
+            padding: 10px;
+            overflow-y: scroll;
+          }
+          /*section:hover{
+            overflow: auto;
+          }
+          section > *{
+            display: flex;
+          }*/
+          .box {
+            background-color: #002c69;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            position: fixed;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 200px;
+          }
+          .col{
+            border: 1px solid black;
+            height: 10px;
+          }
+          .navbar a{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .navbar a:active{
+            background-color: beige;
+          }
+          .navbar{
+            /*border: 1px solid white;*/
+            border-radius:  5px;
+            text-align: center;
+            font: 1em sans-serif;
+            margin-bottom: 10px;
+          }
+          .btn-nav{
+            width: 100%;
+          }
+          .ppp{
+            height: 2000px;
+          }
+          .navbar:hover{
+            background-color: rgb(192, 192, 192);
+          }
+          .main-section {
+            background-color: white;
+            font-size: 20px;
+            color: rgb(71, 71, 71);
+            text-align: center;
+            border: 2px solid black;
+            height: auto;
+            width: 85%;
+            float: right;
+            margin-top: 18px;
+            padding: 20px;
+            z-index: 1;
+          }
+          .p2p{
+            width: 86%;
+            float: right;
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 68px;
+            z-index: 5;
+          }
+          .col-2{
+            transition: all 0.2s ease-in-out;
+          }
+          .col-2:hover{
+            background-color:#0245a3;
+          }
+          /*.nav-2{
+            position: fixed;
+          }*/
+          .main-section_items{
+            display: flex;
+          }
+          .swiper {
+          
+            width: 1180px;
+            height: 620px;
+            margin-top: -60px;
+            z-index: 1;
+            border-radius: 10px;
+          }
+      
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            z-index: 2;
+          }
+      
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+          }
+          
+    </style>
+</head>
+    <body>
+      <div class="container">
+        <header class="main-header">
+              <div class="main-header__brand">
+                <a href="index.html">
+                  <img
+                    src="./photo_2024-04-14_22-05-13.jpg"
+                    alt="logo"
+                    class="main-header-logo"
+                  />
+                </a>
+             </div>
+             <div class="col-3 search">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control" >
+                    <span class="input-group-text"><button type="button" class="btn btn-light btn-search">Search</button></span>
+                </div>
+            </div>
+                <div class="header-panel-items">
+                        <div class="add header-panel-item">
+                            <i class="fa-regular fa-square-plus "></i>
+                        </div>
+                        <div class="sun-mode header-panel-item">
+                            <i class="fa-regular fa-sun"></i>
+                        </div>
+                        <div class="dark-mode header-panel-item">
+                            <i class="fa-regular fa-moon"></i>
+                        </div>
+                        <div class="natifications header-panel-item">
+                            <i class="fa-regular fa-bell"></i>
+                        </div>
+                </div>
+                
+                <div class="login">
+                    <button type="button" class="btn bn-login"style="background-color: #00a1e7; color:white;"><a href="./registration.html" target="_blank">Login and Registration</a></button>
+                </div>
+                    
+        </header>
+    </div>
+    <div>
+      <section class="box">   
+            <div class="navbar" >       
+              <a href="#"><i class="fa-solid fa-house"></i>      Home</a>
+            </div>            
+            <div class="navbar">
+                <a href="./shorts.html"><i class="fa-regular fa-circle-play"></i>      Shorts</a>
+            </div>            
+            <div class="navbar">
+                <a href="#"><i class="fa-solid fa-window-restore"></i>     Subscribes</a>
+            </div><hr>
+            <div class="navbar"> 
+              <a href="./history.html"><i class="fa-solid fa-clock-rotate-left"></i>     History</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-layer-group"></i>     Playlist</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-thumbs-up"></i>     Liked</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-music"></i>     Music</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-clock"></i>     Watch later</a>
+            </div><hr>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-gear"></i>     Settings</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-flag"></i>     Сomplaints</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-circle-question"></i>     Reference</a>
+            </div>
+            <div class="navbar">
+              <a href="#"><i class="fa-solid fa-circle-exclamation"></i>     Post a review</a>
+            </div><hr><hr>
+            <div class="navbar" style="margin-bottom: 80px;">
+             <h6 style="text-align: left;">About the Press service
+              Copyright
+              Contact us Authors
+              For advertisers
+              For developers
+              Terms of Use
+              Confidentiality
+              Rules and safety
+              How Trailer.uz works
+              Testing new features <br><br>
+              <span>© 2024 Radjaboff LLC</span>
+            </h6>
+            </div>
+
+          </section>
+    </div>
+   <section class="p2p">
+          <div class="nav-2" style="background-color: #002c69; position:fixed; width:100%">
+            <div class="row" style="display:flex; justify-content: space-between; text-align:center ">
+            <div class="col-2 upset-1" style="border-radius:10px; width:200px; height:auto; margin-left:20px" >
+              All
+            </div>
+            <div class="col-2" style="border-radius:10px; width:200px; height:auto;">
+              Music
+            </div>
+            <div class="col-2" style="border-radius:10px; width:200px; height:auto;">
+              Classic
+            </div>
+            <div class="col-2" style="border-radius:10px; width:200px; height:auto;">
+              Horror
+            </div>
+            <div class="col-2" style="border-radius:10px; width:200px; height:auto;">
+              War
+            </div>
+            <div class="col-2" style="border-radius:10px; width:200px; height:auto;">
+              Comedy
+            </div>
+          </div>
+          </div>
+   </section>
+
+          <!--<div class="boxx" style="margin-top: 0px;">
+            <div class="main-section">
+              <div>
+                <h4>Top Videos</h4>
+              </div>
+              <div class="col-4 g-15 mt-5 ml-5 pd-5">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div style="margin-left:30px">
+                        <iframe width="350" height="250" src="https://www.youtube.com/embed/xy8aJw1vYHo?si=1xMX_CqAJrbRbxWz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div style="margin-left:285px">
+                        <iframe width="350" height="250" src="https://www.youtube.com/embed/qqrpMRDuPfc?si=I7Z9L9hUTYObgXmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div style="margin-left:540px">
+                        <iframe width="350" height="250" src="https://www.youtube.com/embed/Kdr5oedn7q8?si=XVPyZo0pkuieM8aU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+          <div class="main-section">
+            <h1 style="color:rgb(71, 71, 71); margin-top:10px; text-align:left; margin-left:40px">Top trailer videos suggested for you</h1>
+            <div class="main-section_items">
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:32px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/xy8aJw1vYHo?si=1xMX_CqAJrbRbxWz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 10px;">Joker: Folie à Deux | Official Te...</h5>
+                  <h6  style="margin-left: 70px;">Warner Bros. Pictures <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">32 million views * 3 months ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/qqrpMRDuPfc?si=I7Z9L9hUTYObgXmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 8px;">Godzilla x Kong: The New Empire</h5>
+                  <h6  style="margin-left: 70px;">Warner Bros. Pictures <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">11.6 million views * 8 months ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/Kdr5oedn7q8?si=XVPyZo0pkuieM8aU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 18px;">Kingdom of the Planet of the...</h5>
+                  <h6  style="margin-left: 70px;">20th Century Studios <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:65px">1 million views * 10 days ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-section_items">
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:32px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/73_1biulkYk?si=MZE47FJkWKM1GhU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 8px;">Deadpool & Wolverine | Official...</h5>
+                  <h6  style="margin-left: 70px;">Marvel Entertainment <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">12 million views * 9 days ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/hJiPAJKjUVg?si=y_xnbG3DaGds51n3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 60px;">Trap | Official Trailer</h5>
+                  <h6  style="margin-left: 70px;">Warner Bros. Pictures <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">16 million views * 12 days ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/vS3_72Gb-bI?si=bRJSgyfJ7gzC4dw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 18px;">Blue Beetle – Official Trailer</h5>
+                  <h6  style="margin-left: 70px;">20th Century Studios <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:65px">30 million views * 1 year ago</p>
+                </div>
+              </div>
+            </div>
+
+            <h1 style="color:rgb(71, 71, 71); margin-top:60px; text-align:left; margin-left:40px">Popular movies todays</h1>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./carusel_1.png" alt="carusel_1"></div>
+                <div class="swiper-slide"><img src="./carusel_2.jpg" alt="carusel_2"></div>
+                <div class="swiper-slide"><img src="./carusel_3.jpg" alt="carusel_3"></div>
+                <div class="swiper-slide"><img src="./carusel_4_edit.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./carusel_5.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./carusel_6.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./carusel_77.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./carusel_avatar.webp" alt=""></div>
+                <div class="swiper-slide"><img src="./carusel_9.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="main-section_items">
+              <div class="main_section_item" style="margin-top: 80px; text-align:left; ">
+                <div style="margin-left:32px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/otNh9bTjXWg?si=g31-CVeg6ZnswhtL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 48px;">WONKA | Official Trailer</h5>
+                  <h6  style="margin-left: 70px;">Warner Bros. Pictures <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">44 million views * 9 months ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 80px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/uYPbbksJxIg?si=g4fWYauIK7k3MXeS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 35px;">Oppenheimer | New Trailer</h5>
+                  <h6  style="margin-left: 85px;">Universal Pictures <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">70 million views * 11 months ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 80px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/MjQG-a7d41Q?si=4Njg-GasD58UJ-T9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 18px;">Mufasa: The Lion King | Tea...</h5>
+                  <h6  style="margin-left: 70px;">Walt Disney Studios <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:65px">5.7 million views * 2 days ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-section_items">
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:32px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/hRFY_Fesa9Q?si=MXOUQi24p7cKPNH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 48px;">BAD BOYS: RIDE OR DIE</h5>
+                  <h6  style="margin-left: 46px;">Sony Pictures Entertainmen <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:50px">3.3 million views * 1 months ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/IGzLHNPO4QI?si=WH5Di9t-NeZVmxYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 35px;">Bade Miyan Chote Miyan...</h5>
+                  <h6  style="margin-left: 85px;">Pooja Entertainmen <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:60px">51 million views * 1 months ago</p>
+                </div>
+              </div>
+
+              <div class="main_section_item" style="margin-top: 40px; text-align:left; ">
+                <div style="margin-left:60px">
+                  <iframe width="350" height="250" src="https://www.youtube.com/embed/FVswuip0-co?si=l7U12yalK2gl5apq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <h5 style="margin-left: 18px;">FURIOSA : A MAD MAX SAGA</h5>
+                  <h6  style="margin-left: 70px;">Warner Bros. Pictures <i class="fa-solid fa-circle-check"></i></h6>
+                  <p style="font-size: 14px; margin-left:55px">14 million views * 1 months ago</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Swiper JS -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          
+            <!-- Initialize Swiper -->
+            <script>
+              var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                  delay: 2500,
+                  disableOnInteraction: false,
+                },
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+              });
+            </script>
+          </div>
+
+    </body>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
